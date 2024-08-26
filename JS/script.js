@@ -49,17 +49,18 @@ const toDoList = document.querySelector('.to-do__list');
 const loaderTodo = document.querySelector('.loader-todo');
 
 const createHtmlToDoLi = (id, title, completed) => {
-	const newItem = document.createElement('li');
-	newItem.className = 'to-do__item';
-	newItem.innerHTML = `
-		<input type="checkbox" id="checkbox-${id}" ${
-		completed ? 'checked' : ''
-	} class='to-do__input'>
-		<label for="checkbox-${id}">${title}</label>
-		<img class='to-do__del' src="./assets/images/icons/delete.svg" alt="delete icon">
-	`;
-
-	toDoList.insertAdjacentElement('afterbegin', newItem);
+	toDoList.insertAdjacentHTML(
+		'afterbegin',
+		/*html*/ `
+      <li class='to-do__item'>
+          <input type="checkbox" id="checkbox-${id}" ${
+			completed ? 'checked' : ''
+		} class= 'to-do__input'>
+          <label for="checkbox-${id}">${title}</label>
+          <img class='to-do__del' src="./assets/images/icons/delete.svg" alt="delete icon">
+    </li>
+    `
+	);
 };
 
 const delItem = e => {
