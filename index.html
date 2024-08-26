@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>JS</title>
+		<link
+			rel="stylesheet"
+			href="assets/css/style.min.css"
+		/>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="block__foto">
+					<div class="loader loader-foto"></div>
+					<ul class="list__foto"></ul>
+				</div>
+				<div class="to-do__wrap">
+					<h1>To-do list</h1>
+					<form
+						class="to-do__form"
+						name="to-do__form"
+					>
+						<input
+							class="to-do__enter"
+							type="text"
+							placeholder="Add your text"
+							name="to-do__enter"
+						/>
+						<button class="to-do__button">Add</button>
+					</form>
+					<div class="to-do__list-wrap">
+						<div class="loader loader-todo"></div>
+						<ul class="to-do__list"></ul>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="./JS/script.js"></script>
+	</body>
+</html>
